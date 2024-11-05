@@ -35,11 +35,6 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/explore" className={styles.navItem}>
-                <FiGrid className={styles.icon} /> Explore
-              </Link>
-            </li>
-            <li>
               <Link href="/cart" className={styles.navItem}>
                 <FiShoppingCart className={styles.icon} /> Cart
               </Link>

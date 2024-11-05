@@ -3,11 +3,22 @@
   padding: 2rem;
 }
 
+/* Title styles */
 .title {
   text-align: center;
   font-size: 2rem;
   color: #333;
   margin-bottom: 2rem;
+
+  /* Hide title on larger screens */
+  display: none; /* Initially hidden */
+}
+
+/* Show title only on mobile view */
+@media (max-width: 768px) {
+  .title {
+    display: block; /* Show title on mobile */
+  }
 }
 
 /* Grid for products */
@@ -28,8 +39,7 @@
   align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
-  height: auto;
-  /* Removed fixed width to allow cards to grow with grid */
+  height: auto; /* Removed fixed width to allow cards to grow with grid */
   margin: 0; /* Removed margin to avoid overlap */
 }
 
@@ -93,7 +103,6 @@
   }
 }
 
-
 .priceButtonContainer {
   display: flex; /* Use Flexbox for alignment */
   align-items: center; /* Vertically center the items */
@@ -109,6 +118,7 @@
   margin: 0; /* Removes default margin */
   flex-grow: 1; /* Allows the price to take remaining space */
 }
+
 .notificationContainer {
   position: fixed; /* Change to fixed positioning */
   top: 10px; /* Set distance from the top of the screen */

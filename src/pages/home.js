@@ -45,31 +45,34 @@ const HomePage = () => { // Ensure products are passed as a prop
     };
   
     return (
-      <>
-        <Navbar />
-        <div className={styles.container}>
-          {/* Show the message at the top of the grid */}
-          <div className={styles.notificationContainer}>
-            {message && <p className={styles.notification}>{message}</p>}
-          </div>
-          
-          <div className={styles.grid}>
-            {products.map((product) => (
-              <div key={product.id} className={styles.card}>
-                <img src={product.image} alt={product.name} className={styles.productImage} />
-                <h2 className={styles.productName}>{product.name}</h2>
-                <p className={styles.productWeight}>{product.weight}</p>
-                <div className={styles.priceButtonContainer}>
-                  <p className={styles.productPrice}>${product.price}</p>
-                  <button className={styles.addButton} onClick={handleAddToCart}>+</button>
+        <>
+          <Navbar />
+          <div className={styles.container}>
+            {/* Show the message at the top of the grid */}
+            <div className={styles.notificationContainer}>
+              {message && <p className={styles.notification}>{message}</p>}
+            </div>
+    
+            {/* Add Zeptik title */}
+            <h1 className={styles.title}>Zeptik</h1> {/* Title added here */}
+    
+            <div className={styles.grid}>
+              {products.map((product) => (
+                <div key={product.id} className={styles.card}>
+                  <img src={product.image} alt={product.name} className={styles.productImage} />
+                  <h2 className={styles.productName}>{product.name}</h2>
+                  <p className={styles.productWeight}>{product.weight}</p>
+                  <div className={styles.priceButtonContainer}>
+                    <p className={styles.productPrice}>${product.price}</p>
+                    <button className={styles.addButton} onClick={handleAddToCart}>+</button>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-        <Footer/>
-      </>
-    );
-  };
-  
-  export default HomePage;
+          <Footer />
+        </>
+      );
+    };
+    
+    export default HomePage;

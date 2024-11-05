@@ -20,7 +20,7 @@
   
   .sectionTitle {
     font-size: 1.5rem;
-    color: #444;
+    color: #38832e;
     margin-bottom: 0.5rem;
     border-bottom: 1px solid #ddd;
     padding-bottom: 0.5rem;
@@ -31,7 +31,7 @@
     background-color: #f9f9f9;
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px #38832e;
   }
   
   .card p {
@@ -47,7 +47,7 @@
     border: none;
     border-radius: 4px;
     color: #fff;
-    background-color: #333;
+    background-color: #38832e;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }

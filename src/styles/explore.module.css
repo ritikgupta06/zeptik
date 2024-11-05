@@ -1,0 +1,51 @@
+.container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.searchBar {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.categoryBox {
+  background-color: #38832e;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 180px;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.categoryBox:hover {
+  background-color: #4caf50;
+}
+
+@media (max-width: 600px) {
+  .categories {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .categoryBox {
+    width: 90%;
+  }
+}

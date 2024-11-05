@@ -1,0 +1,142 @@
+/* Container styles */
+.container {
+    padding: 2rem;
+  }
+  
+  /* Title styles */
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+  
+    /* Hide title on larger screens */
+    display: none; /* Initially hidden */
+  }
+  
+  /* Show title only on mobile view */
+  @media (max-width: 768px) {
+    .title {
+      display: block; /* Show title on mobile */
+    }
+  }
+  
+  /* Grid for products */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusts to fill space */
+    gap: 1.5rem; /* Space between cards */
+  }
+  
+  /* Product card styles */
+  .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    height: auto; /* Removed fixed width to allow cards to grow with grid */
+    margin: 0; /* Removed margin to avoid overlap */
+  }
+  
+  /* Add hover effect */
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .productImage {
+    width: 100%;
+    height: 150px; /* Set a fixed height to maintain aspect ratio */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 8px; /* Optional: Matches the card's rounded corners */
+    margin-bottom: 1rem;
+  }
+  
+  .productName {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+  }
+  
+  .productWeight {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0.5rem 0;
+  }
+  
+  .productPrice {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  /* Add button styles */
+  .addButton {
+    background-color: #c724c1;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .addButton:hover {
+    background-color: #45a049;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 808px) {
+    .grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjusts for smaller screens */
+    }
+  }
+  
+  .priceButtonContainer {
+    display: flex; /* Use Flexbox for alignment */
+    align-items: center; /* Vertically center the items */
+    justify-content: space-between; /* Space them out */
+    margin-top: 0.5rem; /* Optional: Adds some space above the container */
+    width: 100%; /* Ensures it takes full width of the card */
+  }
+  
+  .productPrice {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0; /* Removes default margin */
+    flex-grow: 1; /* Allows the price to take remaining space */
+  }
+  
+  .notificationContainer {
+    position: fixed; /* Change to fixed positioning */
+    top: 10px; /* Set distance from the top of the screen */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center alignment adjustment */
+    z-index: 1000; /* High z-index to ensure it appears above other elements */
+    margin: 0 auto; /* Center the notification */
+    width: auto; /* Adjust width if needed */
+    max-width: 90%; /* Responsive max width */
+    padding: 10px; /* Padding for the notification */
+    height: 40px;
+  }
+  
+  .notification {
+    background-color: #ff5c5c; /* Green background */
+    color: white; /* White text */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center text */
+    transition: opacity 0.5s ease; /* Smooth transition */
+  }
+  

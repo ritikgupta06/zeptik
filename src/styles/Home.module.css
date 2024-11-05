@@ -1,34 +1,28 @@
-/* Container styles */
 .container {
   padding: 2rem;
 }
 
-/* Title styles */
 .title {
   text-align: center;
   font-size: 2rem;
   color: #333;
   margin-bottom: 2rem;
 
-  /* Hide title on larger screens */
-  display: none; /* Initially hidden */
+  display: none;
 }
 
-/* Show title only on mobile view */
 @media (max-width: 768px) {
   .title {
-    display: block; /* Show title on mobile */
+    display: block;
   }
 }
 
-/* Grid for products */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusts to fill space */
-  gap: 1.5rem; /* Space between cards */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
 }
 
-/* Product card styles */
 .card {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -39,20 +33,19 @@
   align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
-  height: auto; /* Removed fixed width to allow cards to grow with grid */
-  margin: 0; /* Removed margin to avoid overlap */
+  height: auto;
+  margin: 0;
 }
 
-/* Add hover effect */
 .card:hover {
   transform: translateY(-5px);
 }
 
 .productImage {
   width: 100%;
-  height: 150px; /* Set a fixed height to maintain aspect ratio */
-  object-fit: cover; /* Ensures the image covers the area without distortion */
-  border-radius: 8px; /* Optional: Matches the card's rounded corners */
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
   margin-bottom: 1rem;
 }
 
@@ -76,9 +69,8 @@
   margin-bottom: 1rem;
 }
 
-/* Add button styles */
 .addButton {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   border-radius: 50%;
@@ -96,46 +88,45 @@
   background-color: #45a049;
 }
 
-/* Responsive adjustments */
 @media (max-width: 808px) {
   .grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjusts for smaller screens */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 }
 
 .priceButtonContainer {
-  display: flex; /* Use Flexbox for alignment */
-  align-items: center; /* Vertically center the items */
-  justify-content: space-between; /* Space them out */
-  margin-top: 0.5rem; /* Optional: Adds some space above the container */
-  width: 100%; /* Ensures it takes full width of the card */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  width: 100%;
 }
 
 .productPrice {
   font-size: 1.1rem;
   font-weight: bold;
   color: #333;
-  margin: 0; /* Removes default margin */
-  flex-grow: 1; /* Allows the price to take remaining space */
+  margin: 0;
+  flex-grow: 1;
 }
 
 .notificationContainer {
-  position: fixed; /* Change to fixed positioning */
-  top: 10px; /* Set distance from the top of the screen */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Center alignment adjustment */
-  z-index: 1000; /* High z-index to ensure it appears above other elements */
-  margin: 0 auto; /* Center the notification */
-  width: auto; /* Adjust width if needed */
-  max-width: 90%; /* Responsive max width */
-  padding: 10px; /* Padding for the notification */
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  margin: 0 auto;
+  width: auto;
+  max-width: 90%;
+  padding: 10px;
   height: 40px;
 }
 
 .notification {
-  background-color: #ff5c5c; /* Green background */
-  color: white; /* White text */
-  border-radius: 5px; /* Rounded corners */
-  text-align: center; /* Center text */
-  transition: opacity 0.5s ease; /* Smooth transition */
+  background-color: #ff5c5c;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  transition: opacity 0.5s ease;
 }

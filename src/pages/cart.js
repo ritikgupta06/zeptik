@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '@/styles/cart.module.css';
 import Navbar from '@/components/navbar';
+import Footer from '@/components/footer';
 
 
 const Cart = () => {
@@ -78,6 +79,7 @@ const Cart = () => {
         </ul>
       )}
     </div>
+    <Footer/>
     </>
   );
 };

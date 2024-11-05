@@ -1,0 +1,90 @@
+.cartContainer {
+    padding: 20px; /* Padding around the cart */
+    background-color: #f9f9f9; /* Light background for the cart */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 600px; /* Maximum width */
+    margin: auto; /* Center the cart */
+  }
+  
+  .cartTitle {
+    font-size: 24px; /* Larger font for title */
+    margin-bottom: 15px; /* Space below title */
+  }
+  
+  .emptyCartMessage {
+    font-size: 18px; /* Font size for empty message */
+    text-align: center; /* Center the text */
+  }
+  
+  .cartItemList {
+    list-style-type: none; /* Remove bullets from list */
+    padding: 0; /* Remove padding */
+  }
+  
+  .cartItem {
+    display: flex; /* Flex layout for items */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Padding for each item */
+    border-bottom: 1px solid #ccc; /* Separator line */
+  }
+  
+  .cartItem:last-child {
+    border-bottom: none; /* Remove border for last item */
+  }
+  
+  .cartItemImage {
+    width: 70px; /* Set image width */
+    height: 70px; /* Set image height */
+    margin-right: 15px; /* Space between image and details */
+    border-radius: 4px; /* Rounded corners for image */
+  }
+  
+  .cartItemDetails {
+    flex-grow: 1; /* Allow details to take up remaining space */
+  }
+  
+  .cartItemName {
+    font-size: 18px; /* Font size for item name */
+    margin: 0; /* Remove margin */
+  }
+  
+  .cartItemPrice {
+    font-size: 16px; /* Font size for price */
+    color: #555; /* Darker color for price */
+  }
+  
+  .buttonContainer {
+    display: flex; /* Flex layout for buttons */
+    flex-direction: column; /* Stack buttons vertically */
+  }
+  
+  .buyButton {
+    background-color: #4caf50; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor */
+    margin-bottom: 5px; /* Space between buttons */
+    transition: background-color 0.3s; /* Smooth background transition */
+  }
+  
+  .buyButton:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
+  
+  .removeButton {
+    background-color: #e74c3c; /* Red background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth background transition */
+  }
+  
+  .removeButton:hover {
+    background-color: #c0392b; /* Darker red on hover */
+  }
+  

@@ -1,0 +1,101 @@
+/* Top Navbar for Desktop */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #38832e;
+    color: #fff;
+  }
+  
+  .logo a {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .searchContainer {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin: 0 2rem;
+  }
+  
+  .searchInput {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+  }
+  
+  .navLinks {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navItem {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .navItem:hover {
+    color: #f0a500;
+  }
+  
+  .icon {
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+  }
+  
+  /* Bottom Tab Bar for Mobile */
+  .tabBar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color:#ffffff;
+    padding: 0.5rem 0;
+    border-top: 1px solid #2ca43a;
+    z-index: 10;
+  }
+  
+  .tabItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000000;
+    font-size: 0.9rem;
+    text-decoration: none;
+  }
+  
+  .tabItem:hover {
+    color: #38832e;
+  }
+  
+  .tabIcon {
+    font-size: 1.5rem;
+  }
+  
+  /* Hide desktop navbar and search bar in mobile view */
+  @media (max-width: 768px) {
+    .navbar {
+      display: none;
+    }
+  
+    .searchContainer {
+      display: none;
+    }
+  }
+  

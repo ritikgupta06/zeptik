@@ -1,0 +1,108 @@
+.footer {
+    background-color: #38832e;
+    color: white; 
+    padding: 20px;
+    text-align: center;
+    position: relative; 
+    bottom: 0; 
+    width: 100%;
+  }
+  
+  .footerContent {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    align-items: flex-start; 
+  }
+  
+  .footerLinks, .footerContact, .footerAbout, .footerNewsletter, .footerSocialMedia {
+    margin: 10px; 
+    flex: 1 1 200px;
+    min-width: 150px; 
+  }
+  
+  .footerLinks h4, .footerContact h4, .footerAbout h4, .footerNewsletter h4, .footerSocialMedia h4 {
+    margin-bottom: 10px;
+  }
+  
+  .footerLinks ul, .footerSocialMediaLinks {
+    list-style-type: none; 
+    padding: 0; 
+  }
+  
+  .footerLinks li, .footerSocialMediaLinks li {
+    margin: 5px 0; 
+  }
+  
+  .footerLinks a, .footerSocialMediaLinks a {
+    color: white; 
+    text-decoration: none; 
+    transition: color 0.3s; 
+  }
+  
+  .footerLinks a:hover, .footerSocialMediaLinks a:hover {
+    color: #19371a; 
+  }
+  
+  .footerNewsletter {
+    text-align: left; 
+  }
+  
+  .newsletterInput {
+    padding: 10px; 
+    margin-right: 5px; 
+    border: none; 
+    border-radius: 5px; 
+    width: 100%; 
+    max-width: 200px; 
+  }
+  
+  .subscribeButton {
+    padding: 10px 15px; 
+    background-color: #4caf50; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
+    width: 100%;
+    max-width: 120px; 
+  }
+  
+  .subscribeButton:hover {
+    background-color: #45a049;
+  }
+  
+  .footerCopyright {
+    margin-top: 20px; 
+    text-align: center; 
+  }
+  
+
+  @media (max-width: 768px) {
+    .footerContent {
+      flex-direction: column; 
+      align-items: center; 
+    }
+  
+    .footerLinks,
+    .footerContact,
+    .footerAbout,
+    .footerNewsletter,
+    .footerSocialMedia {
+      text-align: center; 
+      flex: 1 1 100%;
+    }
+  
+    .newsletterInput, .subscribeButton {
+      margin: 10px 0; 
+      width: 90%; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer {
+      padding: 15px; 
+    }
+  }
+  

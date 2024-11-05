@@ -119,6 +119,7 @@
   width: auto; /* Adjust width if needed */
   max-width: 90%; /* Responsive max width */
   padding: 10px; /* Padding for the notification */
+  height: 40px;
 }
 
 .notification {

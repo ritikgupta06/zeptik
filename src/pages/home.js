@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../styles/Home.module.css';
 import Navbar from '@/components/navbar';
+
 
 const products = [
   { id: 1, name: '  Egg Red', weight: '4pcs', price: '1.99', image: 'data:image/jpeg;base64,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' },
@@ -28,26 +29,43 @@ const products = [
 
 
 ];
-
-const HomePage = () => {
-  return (
-    <>
-    <Navbar/>
-    <div className={styles.container}>
-      <div className={styles.grid}>
-        {products.map((product) => (
-          <div key={product.id} className={styles.card}>
-            <img src={product.image} alt={product.name} className={styles.productImage} />
-            <h2 className={styles.productName}>{product.name}</h2>
-            <p className={styles.productWeight}>{product.weight}, Price</p>
-            <p className={styles.productPrice}>${product.price}</p>
-            <button className={styles.addButton}>+</button>
+const HomePage = () => { // Ensure products are passed as a prop
+    const [message, setMessage] = useState('');
+  
+    const handleAddToCart = () => {
+      setMessage('Item added to cart!');
+  
+      // Clear the message after 3 seconds
+      setTimeout(() => {
+        setMessage('');
+      }, 3000);
+    };
+  
+    return (
+      <>
+        <Navbar />
+        <div className={styles.container}>
+          {/* Show the message at the top of the grid */}
+          <div className={styles.notificationContainer}>
+            {message && <p className={styles.notification}>{message}</p>}
           </div>
-        ))}
-      </div>
-    </div>
-    </>
-  );
-};
-
-export default HomePage;
+          
+          <div className={styles.grid}>
+            {products.map((product) => (
+              <div key={product.id} className={styles.card}>
+                <img src={product.image} alt={product.name} className={styles.productImage} />
+                <h2 className={styles.productName}>{product.name}</h2>
+                <p className={styles.productWeight}>{product.weight}</p>
+                <div className={styles.priceButtonContainer}>
+                  <p className={styles.productPrice}>${product.price}</p>
+                  <button className={styles.addButton} onClick={handleAddToCart}>+</button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </>
+    );
+  };
+  
+  export default HomePage;

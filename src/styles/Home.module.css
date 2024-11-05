@@ -13,8 +13,8 @@
 /* Grid for products */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjusts to fill space */
+  gap: 1.5rem; /* Space between cards */
 }
 
 /* Product card styles */
@@ -22,18 +22,18 @@
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 1rem; /* Reduced padding to make the card more compact */
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
-  height: auto; /* Ensures the card height adapts to its content */
-  max-width: 200px; /* Sets a fixed width for consistency in grid layout */
-
+  height: auto;
+  /* Removed fixed width to allow cards to grow with grid */
+  margin: 0; /* Removed margin to avoid overlap */
 }
 
-
+/* Add hover effect */
 .card:hover {
   transform: translateY(-5px);
 }
@@ -45,6 +45,7 @@
   border-radius: 8px; /* Optional: Matches the card's rounded corners */
   margin-bottom: 1rem;
 }
+
 .productName {
   font-size: 1.2rem;
   font-weight: bold;
@@ -86,8 +87,44 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 808px) {
   .grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjusts for smaller screens */
   }
+}
+
+
+.priceButtonContainer {
+  display: flex; /* Use Flexbox for alignment */
+  align-items: center; /* Vertically center the items */
+  justify-content: space-between; /* Space them out */
+  margin-top: 0.5rem; /* Optional: Adds some space above the container */
+  width: 100%; /* Ensures it takes full width of the card */
+}
+
+.productPrice {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  margin: 0; /* Removes default margin */
+  flex-grow: 1; /* Allows the price to take remaining space */
+}
+.notificationContainer {
+  position: fixed; /* Change to fixed positioning */
+  top: 10px; /* Set distance from the top of the screen */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center alignment adjustment */
+  z-index: 1000; /* High z-index to ensure it appears above other elements */
+  margin: 0 auto; /* Center the notification */
+  width: auto; /* Adjust width if needed */
+  max-width: 90%; /* Responsive max width */
+  padding: 10px; /* Padding for the notification */
+}
+
+.notification {
+  background-color: #ff5c5c; /* Green background */
+  color: white; /* White text */
+  border-radius: 5px; /* Rounded corners */
+  text-align: center; /* Center text */
+  transition: opacity 0.5s ease; /* Smooth transition */
 }
